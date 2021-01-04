@@ -40,7 +40,7 @@ public class BoardController {
 		String mboard_header = "공지";
 		
 		Date abc = vo.getMboard_reg_date();
-		// 데이터를 맵에 저장
+		// 데이터를 맵에 저장 테스트해봅니다.
 		Map<String, Object> map = new HashMap<String, Object>();
 		
 		//공지전용 리스트
