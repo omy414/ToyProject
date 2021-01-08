@@ -3,7 +3,7 @@ package com.movie.ace.main;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Locale;
-
+import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -21,9 +21,9 @@ import com.movie.ace.wishlist.WishListMapper;
 @RequestMapping("/")
 public class MainPageController {
 
-	@Autowired
+	@Inject
 	private WishList boxoffice;
-	@Autowired
+	@Inject
 	private SqlSession ss;
 	
 	// 테스트용 메인홈1

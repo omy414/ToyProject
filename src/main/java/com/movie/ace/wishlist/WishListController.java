@@ -16,22 +16,9 @@ public class WishListController {
 	@Autowired
 	private WishListDAO wishDAO;
 	
-//	@RequestMapping(value = "/Test", method = RequestMethod.GET)
-//	public String Movielist(HttpServletRequest req, HttpServletResponse res) {
-//		CustomUserDetails cud = (CustomUserDetails) req.getSession().getAttribute("userInfo");
-//		int mno = cud.getMember_no();
-//			System.out.println("************************/Test 들어옴***********************************");
-//			wishDAO.getWishList(req, res,mno);
-//			System.out.println("************************/Test나간다****************************************************");
-//		return "/wishlist/Test";
-//	}
-	
 	@RequestMapping(value = "/MovieDel", method = RequestMethod.GET)
 	public String Moviedelete(HttpServletRequest req, HttpServletResponse res) {
 		System.out.println("************************/MOVIE DELETE 들어옴***********************************");
-//		CustomUserDetails cud = (CustomUserDetails) req.getSession().getAttribute("userInfo");
-//		int mno = cud.getMember_no();
-//		String memberNo = String.valueOf(mno);
 		String memberNo = req.getParameter("member_no");
 		String moviecd = req.getParameter("moviecd");
 		//String memberNo = req.getParameter("member_no");

@@ -16,7 +16,7 @@ import com.movie.ace.board.ReplyVO;
 public class BoardDAO implements BoardMapper {
  
 	@Inject
-	SqlSession SqlSession;
+	SqlSession sqlSession;
 
 	// 게시글 쓰기
 	@Override
@@ -40,39 +40,39 @@ public class BoardDAO implements BoardMapper {
 		String board_sort = vo.getBoard_sort();
 		
 		if(board_sort.equals("공지사항")) {
-			SqlSession.insert("board.notice_insert", vo);
+			sqlSession.insert("board.notice_insert", vo);
 		}else if(board_sort.equals("영화게시판")) {
-			SqlSession.insert("board.insert", vo);			
+			sqlSession.insert("board.insert", vo);			
 		}else if(board_sort.equals("자유게시판")) {
 			
 		}else if(board_sort.equals("문의게시판")) {
 			
 		}else {
-			SqlSession.insert("board.insert", vo);
+			sqlSession.insert("board.insert", vo);
 		}
 	}
 
 	@Override
 	public BoardVO change(int bno) throws Exception {
-		return SqlSession.selectOne("board.change", bno);
+		return sqlSession.selectOne("board.change", bno);
 	}
 
 	// 게시글 상세보기
 	@Override
 	public BoardVO read(int bno) throws Exception {
-		return SqlSession.selectOne("board.view", bno);
+		return sqlSession.selectOne("board.view", bno);
 	}
 
 	// 게시글 수정
 	@Override
 	public void update(BoardVO vo) throws Exception {
-		SqlSession.update("board.update", vo);
+		sqlSession.update("board.update", vo);
 	}
 
 	// 게시글 삭제
 	@Override
 	public void delete(int bno) throws Exception {
-		SqlSession.delete("board.deleteArticle", bno);
+		sqlSession.delete("board.deleteArticle", bno);
 	}
 
 	// 게시글 전체 목록
@@ -86,7 +86,7 @@ public class BoardDAO implements BoardMapper {
 		System.out.println(start);
 		System.out.println(end);
 
-		return SqlSession.selectList("board.listAll", map);
+		return sqlSession.selectList("board.listAll", map);
 	}
 	//공지사항 목록
 	public List<BoardVO> noticeAll() throws Exception{
@@ -100,7 +100,7 @@ public class BoardDAO implements BoardMapper {
 		Map<String, String> map = new HashMap<String, String>();
 		map.put("searchOption", searchOption);
 		map.put("keyword", keyword);
-		return SqlSession.selectOne("board.countArticle", map);
+		return sqlSession.selectOne("board.countArticle", map);
 	}
 
 	//조회수 증가지연처리
@@ -116,7 +116,7 @@ public class BoardDAO implements BoardMapper {
 		System.out.println("업데이트시간 : " + update_time);
 		System.out.println("최신시간 : " + current_time);
 		if (current_time - update_time > 5000 * 1000) {
-			SqlSession.update("board.increaseViewcnt",bno);
+			sqlSession.update("board.increaseViewcnt",bno);
 			session.setAttribute("update_time_" + bno, current_time);
 		}
 	}
@@ -137,20 +137,18 @@ public class BoardDAO implements BoardMapper {
 		System.out.println("최신시간 : " + current_time);
 		System.out.println(current_time - like_update_time);
 		if (current_time - like_update_time > 360 * 1000) {
-			 SqlSession.update("board.mboard_like", vo);
+			 sqlSession.update("board.mboard_like", vo);
 			session.setAttribute("like_current_time", current_time);
 		}
 	}
 	
 	@Override
 	public void mboard_report(BoardVO vo) throws Exception{
-		SqlSession.update("board.mboard_report", vo);
+		sqlSession.update("board.mboard_report", vo);
 	}
 	
 	//---------------댓글 부분------------------------------------
 	
-	@Inject
-	SqlSession sqlSession;
 
 	@Override
 	public List<ReplyVO> listReply(Integer bno) {
@@ -171,7 +169,7 @@ public class BoardDAO implements BoardMapper {
 
 	@Override
 	public void deleteReply(Integer mboard_no) {
-		SqlSession.delete("board.deleteReply", mboard_no);	
+		sqlSession.delete("board.deleteReply", mboard_no);	
 		}
 	
 	//----------------관리자 페이지 부분----------------------------
@@ -183,14 +181,14 @@ public class BoardDAO implements BoardMapper {
 		System.out.println(start);
 		System.out.println(end);
 
-		return SqlSession.selectList("board.reportlistAll", map);
+		return sqlSession.selectList("board.reportlistAll", map);
 	}
 	
 	@Override
 	public int reportCount() {
 		Map<String, String> map = new HashMap<String, String>();
 		
-		return SqlSession.selectOne("board.reportCount", map);
+		return sqlSession.selectOne("board.reportCount", map);
 	}
 	
 }

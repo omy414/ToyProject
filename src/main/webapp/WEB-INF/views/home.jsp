@@ -117,8 +117,6 @@
 }
 
 </style>
-<%@ taglib prefix="sec"
-	uri="http://www.springframework.org/security/tags"%>
 </head>
 <body class="animsition">
 	<jsp:include page="./include/header.jsp"></jsp:include>
