@@ -233,12 +233,10 @@
 
 		<div class="header-cart flex-col-l p-l-65 p-r-25">
 			<div class="header-cart-title flex-w flex-sb-m p-b-8">
-				<sec:authorize access="isAuthenticated()">
-					<span class="mtext-103 cl2"> ${userInfo.member_id } </span>
-				</sec:authorize>
-				<sec:authorize access="isAnonymous()">
+					<c:if test="${ok == 'omy414'}">
+						<span class="mtext-103 cl2"> omy414 </span>
+					</c:if>
 					<span class="mtext-103 cl2"> Guest </span>
-				</sec:authorize>
 				<div
 					class="fs-35 lh-10 cl2 p-lr-5 pointer hov-cl1 trans-04 js-hide-cart">
 					<i class="zmdi zmdi-close"></i>
@@ -249,20 +247,15 @@
 
 
 				<div class="w-full">
-					<sec:authorize access="isAuthenticated()">
-						<div class="header-cart-buttons flex-w w-full">
+						<!-- <div class="header-cart-buttons flex-w w-full">
 							<a href="/modifyMyinfo"
 								class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10">
 								내정보수정 </a>
 							<form action="/logout" method="POST">
-								<input type="hidden" name="${_csrf.parameterName}"
-									value="${_csrf.token}" />
 								<button type="submit"
 									class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10">로그아웃</button>
 							</form>
-						</div>
-					</sec:authorize>
-					<sec:authorize access="isAnonymous()">
+						</div> -->
 						<div class="header-cart-buttons flex-w w-full">
 							<a href="loginModalPage" data-target="#modal-testNew"
 								role="button" data-toggle="modal" data-bmdWidth="640"
@@ -274,7 +267,7 @@
 								class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10">
 								회원가입 </a>
 						</div>
-					</sec:authorize>
+					
 				</div>
 			</div>
 		</div>

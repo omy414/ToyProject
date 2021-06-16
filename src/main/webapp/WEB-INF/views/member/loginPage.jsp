@@ -49,11 +49,11 @@ $(window).on('scroll', function() {
 			<div class="form-group">
 				<label for="exampleDropdownFormEmail1">ID</label> 
 				<input type="text"
-					class="form-control" name="id" placeholder="아이디">
+					class="form-control" name="memberId" placeholder="아이디">
 			</div>
 			<div class="form-group">
 				<label for="exampleDropdownFormPassword1">Password</label> 
-				<input type="password" class="form-control" name="password" placeholder="비밀번호">
+				<input type="password" class="form-control" name="memberPw" placeholder="비밀번호">
 					
 				<c:if test="${not empty SPRING_SECURITY_LAST_EXCEPTION}">
 					<font color="red">

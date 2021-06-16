@@ -3,15 +3,14 @@
 
 <mapper namespace="member">
 	<!-- 이메일로 회원 조회 -->
-	 <select id="selectByEmail" resultType="com.movie.ace.member.MemberVo">
+	 <select id="checkOurMember" resultType="int">
         <![CDATA[
           SELECT
-              member_email,
-              member_name
+              count(0)
           FROM
               Member
           WHERE
-              member_email = #{email}       
+              member_id = #{memberId} && member_pw = #{memberPw}       
       ]]> 
     </select>
 </mapper>
