@@ -233,8 +233,8 @@
 
 		<div class="header-cart flex-col-l p-l-65 p-r-25">
 			<div class="header-cart-title flex-w flex-sb-m p-b-8">
-					<c:if test="${ok == 'omy414'}">
-						<span class="mtext-103 cl2"> omy414 </span>
+					<c:if test="${user != null || user != ''}">
+						<span class="mtext-103 cl2"> ${user} </span>
 					</c:if>
 					<span class="mtext-103 cl2"> Guest </span>
 				<div

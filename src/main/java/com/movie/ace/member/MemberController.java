@@ -40,14 +40,7 @@ public class MemberController {
 		System.out.println(referer.substring(referer.lastIndexOf("/")+1));
 		String check = referer.substring(referer.lastIndexOf("/")+1);
 		
-		int a = memberService.loginCheck(memberVo);
-		
-		if(a == 1) {
-			session.setAttribute("ok", memberVo.getMemberId());
-		}else {
-			
-		}
-		
+		memberService.loginCheck(memberVo, session);
 		
 		if(check != null) {
 			mv.setViewName("home");
