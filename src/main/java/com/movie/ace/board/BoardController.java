@@ -62,6 +62,7 @@ public class BoardController {
 		
 			System.out.println("test2");
 			System.out.println("test");
+			System.out.println("test3");
 		System.out.println(keyword);
 
 		ModelAndView mav = new ModelAndView();
