@@ -37,12 +37,12 @@ public class BoardController {
 		BoardPager boardPager = new BoardPager(count, curPage);
 		int start = boardPager.getPageBegin();
 		int end = boardPager.getPageEnd();
-		String mboard_header = "공지";
-		
-		Date abc = vo.getMboard_reg_date();
+		String mboard_header = "공지"; 
+		 
+		Date abc = vo.getMboard_reg_date(); 
 		// 데이터를 맵에 저장 테스트해봅니다.
 		Map<String, Object> map = new HashMap<String, Object>();
-		
+		 
 		//공지전용 리스트
 			List<BoardVO> noticelist = boardmapper.noticeAll();
 			map.put("noticelist", noticelist);
@@ -54,14 +54,14 @@ public class BoardController {
 			for (int i = 0; i < list.size(); i++) {
 				System.out.println(list.get(i).getMboard_reg_date());
 			}
-			
+			 
 			map.put("count", count); // 레코드 갯수
 			map.put("searchOption", searchOption);// 검색옵션
 			map.put("keyword", keyword); // 검색 키워드
 			map.put("boardPager", boardPager); // 페이지 처리
 		
-		
-		
+			System.out.println("test2");
+			System.out.println("test");
 		System.out.println(keyword);
 
 		ModelAndView mav = new ModelAndView();
