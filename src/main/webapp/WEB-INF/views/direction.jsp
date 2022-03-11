@@ -17,9 +17,9 @@
   color: crimson;
   font-size: 20px;
 }
-
-a:hover {
-  text-decoration: none;
+  
+a:hover { 
+  text-decoration: none; 
 }
 
 #map {

@@ -82,7 +82,7 @@
 									<li><a href="QnAboard">문의 게시판</a></li>
 								</ul></li>
 
-							<li><a href="AdminPage">미정</a></li>
+							<li><a href="Sign">미정</a></li>
 						</ul>
 					</div>
 
@@ -172,7 +172,7 @@
 						class="fa fa-angle-right" aria-hidden="true"></i>
 				</span></li>
 
-				<li><a href="AdminPage">미정</a></li>
+				<li><a href="Sign">미정</a></li>
 			</ul>
 		</div>
 	</header>
