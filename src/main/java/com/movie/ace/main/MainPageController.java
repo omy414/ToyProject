@@ -40,6 +40,12 @@ public class MainPageController {
 	public String Main() {
 		return "Main";
 	}
+	
+	// 테스트용 sign
+		@RequestMapping(value = "/Sign", method = RequestMethod.GET)
+		public String Sign() {
+			return "sign";
+		}
 
 	// 테스트용 홈2
 	@RequestMapping(value = "/Test2", method = RequestMethod.GET)
