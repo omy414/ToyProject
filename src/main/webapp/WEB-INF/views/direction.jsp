@@ -18,7 +18,7 @@
   font-size: 20px;
 }
 
-a:hover {
+a:hover { 
   text-decoration: none; 
 }
 
