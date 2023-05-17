@@ -21,7 +21,7 @@
 a:hover { 
   text-decoration: none; 
 }
-
+ 
 #map {
   margin: 0 auto;
 }
@@ -29,7 +29,7 @@ a:hover {
 #roadview {
   margin: 0 auto;
 }
-
+ 
 .overlay_info {
   border-radius: 6px;
   margin-bottom: 12px;
