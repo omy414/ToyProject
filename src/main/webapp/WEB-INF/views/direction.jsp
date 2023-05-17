@@ -19,7 +19,7 @@
 }
 
 a:hover {
-  text-decoration: none;
+  text-decoration: none; 
 }
 
 #map {
