@@ -6,7 +6,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>게시판</title>
+<title>게시판1234</title>
 <link rel="stylesheet" href="resources/css/bootstrap.css">
 <link rel="stylesheet" href="resources/css/bootstrap.min.css">
 <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
