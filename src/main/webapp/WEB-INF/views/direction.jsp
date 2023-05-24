@@ -20,6 +20,7 @@
 
 a:hover {
   text-decoration: none;
+  font-size: 20px;
 }
 
 #map {
