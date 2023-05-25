@@ -125,6 +125,7 @@ div#wapper {
   float: left;
   background-color: fuchsia;
   display: block;
+  
 }
 
 .Main_article2 {
