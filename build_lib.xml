@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project name="ToyProject">
+	<jar destfile="src/main/webapp/META-INF/${ant.project.name}.jar" basedir="target/classes"/>
+</project>

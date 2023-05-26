@@ -6,7 +6,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>게시판</title>
+<title>게시판1234</title>
 <link rel="stylesheet" href="resources/css/bootstrap.css">
 <link rel="stylesheet" href="resources/css/bootstrap.min.css">
 <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
@@ -21,7 +21,6 @@
 a:hover {
   text-decoration: none;
   font-size: 20px;
-}
 
 #map {
   margin: 0 auto;
@@ -30,7 +29,7 @@ a:hover {
 #roadview {
   margin: 0 auto;
 }
-
+ 
 .overlay_info {
   border-radius: 6px;
   margin-bottom: 12px;
