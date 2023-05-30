@@ -24,6 +24,7 @@ a:hover {
 
 #map {
   margin: 0 auto;
+	color: black;
 }
 
 #roadview {
